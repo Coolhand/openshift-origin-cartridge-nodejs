@@ -93,4 +93,16 @@ Endpoints:
       - Frontend:      "/health"
         Backend:       ""
         Options:       { health: true }
+
+  - Private-IP-Name:   IP2
+    Private-Port-Name: PORT2
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_PORT2
+    Protocols:
+      - http
+      - ws
+    Mappings:
+      - Frontend:      '/alternatepath'
+        Backend:       ''
+        Options:       { websocket: true }
 Install-Build-Required: false
